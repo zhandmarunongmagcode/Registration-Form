@@ -18,7 +18,7 @@ export default function Contact_us() {
     //dito mo ata ilalagay ung code para mapunta sa sql
     console.log(data);
 
-    //event.target.reset();
+    event.target.reset();
     alert("Form Submitted Successfully");
   };
 
