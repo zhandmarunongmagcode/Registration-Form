@@ -72,14 +72,19 @@
 .textbox input {
   font-size: 20px;
   background-color: #c1c1c1;
-  color: #3a3a3a;
+  color: #2b2b2b;
   border: none;
+  outline: none;
   border-radius: 8px;
   padding: 10px;
   width: 370px;
   margin: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: 1s;
+}
+
+.textbox input::placeholder {
+  color: rgb(99, 99, 99);
 }
 
 .address {
@@ -90,13 +95,18 @@
 .address input {
   font-size: 20px;
   background-color: #c1c1c1;
-  color: #3a3a3a;
+  color: #2b2b2b;
   border: none;
   border-radius: 8px;
   padding: 10px;
   width: 100%;
   margin: 10px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  outline: none;
+}
+
+.address input::placeholder {
+  color: rgb(99, 99, 99);
 }
 .form h3 {
   color: #3a3a3a;
@@ -136,21 +146,26 @@
   font-family: "Inter", sans-serif;
   font-size: 20px;
   background-color: #c1c1c1;
-  color: #3a3a3a;
+  color: #2b2b2b;
   border: none;
   border-radius: 8px;
   padding: 10px;
   width: 100%;
   resize: none;
   margin: 10px;
-
+  outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: 1s;
+}
+
+.textarea textarea::placeholder {
+  color: rgb(99, 99, 99);
 }
 
 .form button {
   width: 140px;
   height: 44px;
+  color: white;
 
   background: linear-gradient(90deg, #ff4e6b 0%, #c31c38 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -163,76 +178,51 @@
   transition: 1s;
 }
 
-/*------responsive----------*/
-
-@media only screen and (max-width: 920px) {
-  .container {
-    height: auto;
-  }
-  .header_box h1 {
-    font-size: 36px;
-  }
-  .textbox input {
-    width: 100%;
-  }
+.form button:hover {
+  background: linear-gradient(90deg, #c31c38 0%, #ff4e6b 100%);
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-  .box {
-    padding: 10px;
-  }
+/*----------------*/
 
-  .header_box {
-    height: 80px;
-  }
-  .header_box h1 {
-    font-size: 26px;
-  }
-  .textbox input {
-    width: 100%;
-    font-size: 16px;
-  }
-  .address input {
-    font-size: 16px;
-  }
-  .textarea textarea {
-    font-size: 16px;
-  }
-  .form h3 {
-    font-size: 16px;
-  }
-  .bolean input {
-    width: 16px;
-    height: 16px;
-    margin: 10px;
-  }
-
-  .bolean label {
-    font-size: 16px;
-    margin: 10px;
-    margin-left: 0;
-    color: #3a3a3a;
-  }
-  .form button {
-    font-size: 16px;
-    width: 124px;
-    height: 36px;
-  }
+.textbox span {
+  margin-left: 18px;
+  color: red;
+  font-size: 14px;
 }
 
-@media only screen and (max-width: 440px) {
-  .container {
-    padding: 14px;
-  }
-  .header_box {
-    height: 60px;
-  }
-  .header_box h1 {
-    font-size: 20px;
-  }
-  .form button {
-    font-size: 16px;
-    width: 118px;
-    height: 30px;
-  }
-} ;
+.firstname {
+  display: flex;
+  flex-direction: column;
+}
+
+.lastname {
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.address span {
+  margin-left: 18px;
+  color: red;
+  font-size: 14px;
+}
+
+.textarea {
+  display: flex;
+  flex-direction: column;
+}
+.textarea span {
+  margin-left: 18px;
+  color: red;
+  font-size: 14px;
+}

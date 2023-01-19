@@ -29,38 +29,46 @@ export default function Contact_us() {
         </div>
         <div className={styles.form}>
           <form onSubmit={handleSubmit(submitForm)}>
-            <span> {errors.firstName?.message} </span>
-            <span> {errors.lastName?.message} </span>
-            <span> {errors.email?.message} </span>
-            <span> {errors.mobile?.message} </span>
-            <span> {errors.address?.message} </span>
-            <span> {errors.student?.message} </span>
-            <span> {errors.textArea?.message} </span>
             <div className={styles.textbox}>
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name"
-                {...register("firstName")}
-              ></input>
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                {...register("lastName")}
-              ></input>
-              <input
-                type="text"
-                name="email"
-                placeholder="Email"
-                {...register("email")}
-              ></input>
-              <input
-                type="text"
-                name="mobile"
-                placeholder="Mobile (+63)"
-                {...register("mobile")}
-              ></input>
+              <div className={styles.firstname}>
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  {...register("firstName")}
+                ></input>
+                <span> {errors.firstName && "First Name is required"} </span>
+              </div>
+
+              <div className={styles.lastname}>
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  {...register("lastName")}
+                ></input>
+                <span> {errors.lastName && "Last Name is required"} </span>
+              </div>
+
+              <div className={styles.email}>
+                <input
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  {...register("email")}
+                ></input>
+                <span> {errors.email?.message} </span>
+              </div>
+
+              <div className={styles.mobile}>
+                <input
+                  type="text"
+                  name="mobile"
+                  placeholder="Mobile (+63)"
+                  {...register("mobile")}
+                ></input>
+                <span> {errors.mobile?.message} </span>
+              </div>
             </div>
             <div className={styles.address}>
               <input
@@ -69,6 +77,7 @@ export default function Contact_us() {
                 placeholder="Address"
                 {...register("address")}
               ></input>
+              <span> {errors.address?.message} </span>
             </div>
             <h3>Old TUP student?</h3>
             <div className={styles.bolean}>
@@ -98,6 +107,9 @@ export default function Contact_us() {
                 name="textArea"
                 {...register("textArea")}
               ></textarea>
+              <span>
+                {errors.textArea && "Message must be atleast 15 characters"}
+              </span>
             </div>
             <button type="submit">Submit</button>
           </form>
