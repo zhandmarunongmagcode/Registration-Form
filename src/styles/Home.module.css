@@ -97,7 +97,7 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
@@ -125,7 +125,7 @@
 
 .thirteen::before,
 .thirteen::after {
-  content: '';
+  content: "";
   position: absolute;
   z-index: -1;
 }
@@ -275,4 +275,21 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(63.37deg, #b61c36 0%, #c92e78 99.72%);
+  font-family: "Inter", sans-serif;
+}
+
+.main button {
+  border: 8px solid rgb(255, 255, 255);
+  background: transparent;
+  color: black;
+  padding: 14px 28px;
+  font-size: 100px;
+  cursor: pointer;
+  color: white;
 }
