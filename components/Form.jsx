@@ -4,6 +4,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { registerSchema } from "schema/formSchema";
 
+import AnimatedBG from "/components/AnimatedBG";
+
 export default function Contact_us() {
   const {
     register,
@@ -79,7 +81,7 @@ export default function Contact_us() {
               ></input>
               <span> {errors.address?.message} </span>
             </div>
-            <h3>Old TUP student?</h3>
+            <h3>Old student?</h3>
             <div className={styles.bolean}>
               <input
                 type="radio"
@@ -115,6 +117,7 @@ export default function Contact_us() {
           </form>
         </div>
       </div>
+      <AnimatedBG />
     </div>
   );
 }
